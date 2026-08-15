@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="page_title">Daigorou-Tools — ツール置き場</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="i18n.js" defer></script>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark">DT</span>
+    <span class="brand-name">Daigorou-Tools</span>
+  </div>
+  <nav class="toplinks">
+    <a href="https://daigorou-addon.github.io/safelight/">Safelight</a>
+    <a href="https://daigorou-addon.github.io/reckon/">Reckon</a>
+    <select id="langSelect" class="lang-select">
+      <option value="ja">日本語</option>
+      <option value="en">English</option>
+      <option value="ko">한국어</option>
+      <option value="zh-CN">简体中文</option>
+      <option value="zh-TW">繁體中文</option>
+      <option value="es">Español</option>
+    </select>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero">
+    <p class="hero-kicker" data-i18n="hero_kicker">ブラウザ完結 / 無料配布</p>
+    <h1>Daigorou-Tools</h1>
+    <p class="hero-lead" data-i18n="hero_lead">配信・創作にまつわる小さなツールを作って公開しています。Web版はインストール不要、Chrome拡張とWindowsソフトはワンクリックで導入できます。</p>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <span class="section-tag">01 — WEB</span>
+      <h2 data-i18n="sec1_title">Webツール</h2>
+      <p data-i18n="sec1_desc">ブラウザだけで完結。インストール・アップロード不要です。</p>
+    </div>
+    <div class="grid grid-2">
+      <a class="card card-featured" href="https://daigorou-addon.github.io/safelight/">
+        <span class="card-tag">IMAGE</span>
+        <h3>Safelight</h3>
+        <p data-i18n="card_safelight_desc">画像の圧縮、変換、編集をブラウザ内だけで処理するツール集。</p>
+      </a>
+      <a class="card card-featured" href="https://daigorou-addon.github.io/reckon/">
+        <span class="card-tag">CALC</span>
+        <h3>Reckon</h3>
+        <p data-i18n="card_reckon_desc">年齢計算・電卓・単位変換など、各種計算をブラウザ内で処理するツール集。</p>
+      </a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <span class="section-tag">02 — EXT</span>
+      <h2 data-i18n="sec2_title">Chrome拡張機能</h2>
+      <p data-i18n="sec2_desc">Chromeウェブストアからワンクリックで導入できます。</p>
+    </div>
+    <div class="grid grid-2">
+      <a class="row" href="https://chromewebstore.google.com/detail/fgbdpmmabohmpbkecbohmhadnnpcmadp?utm_source=item-share-cb">
+        <span class="row-name">TabCookieCleaner</span>
+        <span class="row-desc" data-i18n="ext_tcc_desc">ホワイトリスト方式でタブを閉じた時にCookie/データを自動削除</span>
+      </a>
+      <a class="row" href="https://chromewebstore.google.com/detail/ldggejchfmefpfllgifcdkdidkndfijm?utm_source=item-share-cb">
+        <span class="row-name">Side by Side</span>
+        <span class="row-desc" data-i18n="ext_sbs_desc">1つのタブで画面を左右に分割表示</span>
+      </a>
+      <a class="row" href="https://chromewebstore.google.com/detail/amllefibcgamaindihhheocadjoeaiei?utm_source=item-share-cb">
+        <span class="row-name">QRify</span>
+        <span class="row-desc" data-i18n="ext_qr_desc">QRコードの作成・読み取り</span>
+      </a>
+      <a class="row" href="https://chromewebstore.google.com/detail/hnbjoaecldhkombolofpclgllfpgfhhi?utm_source=item-share-cb">
+        <span class="row-name">X Repost Collapser</span>
+        <span class="row-desc" data-i18n="ext_xrc_desc">X(Twitter)のリポストをタイムラインで折りたたむ</span>
+      </a>
+      <a class="row" href="https://chromewebstore.google.com/detail/ghkobnmkiieaaolppjlgbmhbdlnjgfjc?utm_source=item-share-cb">
+        <span class="row-name">FC2ライブ通知ふくにくん</span>
+        <span class="row-desc" data-i18n="ext_fc2n_desc">FC2ライブの配信開始を通知</span>
+      </a>
+      <a class="row" href="https://chromewebstore.google.com/detail/ccbcmlofkmamdbfabkmjmnmbmikjnodb?utm_source=item-share-cb">
+        <span class="row-name">FC2ライブ検索ふくにくん</span>
+        <span class="row-desc" data-i18n="ext_fc2s_desc">FC2ライブのコメントを検索</span>
+      </a>
+      <a class="row" href="https://chromewebstore.google.com/detail/bejlnfnhfgkaddplnkcnhgmoacineode?utm_source=item-share-cb">
+        <span class="row-name">PPP Live Alert</span>
+        <span class="row-desc" data-i18n="ext_ppp_desc">YouTube/Kick/Twitchの配信開始を通知</span>
+      </a>
+      <a class="row" href="https://chromewebstore.google.com/detail/dnfamnkgdlnpgijmhbkgnhidgfhfgnho?utm_source=item-share-cb">
+        <span class="row-name">Live Comment Search</span>
+        <span class="row-desc" data-i18n="ext_lcs_desc">YouTube / Twitch / Kickのコメントを検索</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <span class="section-tag">03 — APP</span>
+      <h2 data-i18n="sec3_title">Windowsソフト</h2>
+      <p data-i18n="sec3_desc">GitHub Releasesから無料でダウンロードできます。</p>
+    </div>
+    <div class="grid grid-2">
+      <a class="row" href="https://github.com/daigorou-addon/LiveFlare/releases">
+        <span class="row-name">LiveFlare</span>
+        <span class="row-desc" data-i18n="app_liveflare_desc">YouTube/Kick/Twitch/FC2/TwitCastingの配信開始を通知</span>
+      </a>
+      <a class="row" href="https://github.com/daigorou-addon/FamilyTree/releases">
+        <span class="row-name">FamilyTree</span>
+        <span class="row-desc" data-i18n="app_familytree_desc">家系図作成（デスクトップ版）</span>
+      </a>
+      <a class="row" href="https://github.com/daigorou-addon/RelationGraph/releases">
+        <span class="row-name">RelationGraph</span>
+        <span class="row-desc" data-i18n="app_relationgraph_desc">相関図作成（デスクトップ版）</span>
+      </a>
+      <a class="row" href="https://github.com/daigorou-addon/BracketMaker/releases">
+        <span class="row-name">BracketMaker</span>
+        <span class="row-desc" data-i18n="app_bracketmaker_desc">トーナメント表作成（デスクトップ版）</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-links">
+    <a href="https://x.com/daigorouwork" target="_blank" rel="noopener">X (Twitter)</a>
+    <a href="https://daigorou-tools.blogspot.com/" target="_blank" rel="noopener" data-i18n="footer_blog">ブログ</a>
+  </div>
+  <div class="footer-copyright">Copyright (C) 2026 daigorou-tools. All right reserved.</div>
+</footer>
+
+</body>
+</html>

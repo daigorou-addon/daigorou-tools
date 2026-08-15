@@ -1,0 +1,256 @@
+/* ===================================================================
+   Daigorou-Tools — トップページ
+   モチーフ: 工具箱のパーツカタログ。整然としたグリッドとタグラベルで
+   「並べられたツール群」を表現する。
+=================================================================== */
+
+:root{
+  --bg:#0b0f13;
+  --bg-2:#0e1318;
+  --panel:#131920;
+  --panel-2:#171f27;
+  --line:#26303a;
+  --line-soft:#1c242c;
+  --paper:#eef3f6;
+  --ink:#d7dee4;
+  --muted:#7c8894;
+  --accent:#29e0c4;
+  --accent-2:#12a894;
+  --accent-ink:#04241f;
+  --mono:"JetBrains Mono","SFMono-Regular",Consolas,monospace;
+  --sans:"Zen Kaku Gothic New","Hiragino Sans","Noto Sans JP",sans-serif;
+}
+
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{
+  background:
+    radial-gradient(ellipse 900px 500px at 85% -10%, rgba(41,224,196,.06), transparent 60%),
+    var(--bg);
+  color:var(--ink);
+  font-family:var(--sans);
+  min-height:100vh;
+}
+a{color:inherit;text-decoration:none;}
+
+/* ---------- ヘッダー ---------- */
+.topbar{
+  position:sticky;
+  top:0;
+  z-index:10;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:16px 32px;
+  background:rgba(11,15,19,.9);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+  flex-wrap:wrap;
+  gap:12px;
+}
+.brand{display:flex;align-items:center;gap:10px;}
+.brand-mark{
+  font-family:var(--mono);
+  font-weight:700;
+  font-size:13px;
+  background:var(--accent);
+  color:var(--accent-ink);
+  padding:4px 8px;
+  border-radius:4px;
+  letter-spacing:.02em;
+}
+.brand-name{
+  font-weight:900;
+  font-size:16px;
+  color:var(--paper);
+  letter-spacing:.01em;
+}
+.toplinks{display:flex;gap:4px;flex-wrap:wrap;}
+.toplinks a{
+  font-family:var(--mono);
+  font-size:12.5px;
+  color:var(--muted);
+  padding:8px 12px;
+  border-radius:6px;
+  transition:background .15s, color .15s;
+}
+.toplinks a:hover{background:var(--panel-2);color:var(--accent);}
+.lang-select{
+  font-family:var(--mono);
+  font-size:11px;
+  background:var(--panel-2);
+  color:var(--ink);
+  border:1px solid var(--line);
+  border-radius:5px;
+  padding:7px 8px;
+  margin-left:6px;
+  cursor:pointer;
+}
+.lang-select:focus{outline:2px solid var(--accent);outline-offset:1px;}
+
+/* ---------- ヒーロー ---------- */
+main{max-width:1080px;margin:0 auto;padding:0 32px;}
+.hero{padding:64px 0 48px;}
+.hero-kicker{
+  font-family:var(--mono);
+  font-size:12px;
+  letter-spacing:.1em;
+  color:var(--accent);
+  text-transform:uppercase;
+  margin:0 0 14px;
+}
+.hero h1{
+  font-size:clamp(32px, 5vw, 48px);
+  font-weight:900;
+  color:var(--paper);
+  margin:0 0 16px;
+  letter-spacing:-.01em;
+}
+.hero-lead{
+  font-size:15px;
+  line-height:1.8;
+  color:var(--ink);
+  max-width:640px;
+  margin:0;
+}
+
+/* ---------- セクション共通 ---------- */
+.section{padding:40px 0;border-top:1px solid var(--line-soft);}
+.section-head{margin-bottom:24px;}
+.section-tag{
+  font-family:var(--mono);
+  font-size:11px;
+  letter-spacing:.1em;
+  color:var(--accent);
+}
+.section-head h2{
+  font-size:22px;
+  font-weight:900;
+  color:var(--paper);
+  margin:8px 0 6px;
+}
+.section-head p{
+  font-size:13px;
+  color:var(--muted);
+  margin:0;
+}
+
+/* ---------- Webツールのカード ---------- */
+.grid{display:grid;gap:14px;}
+.grid-4{grid-template-columns:repeat(4,1fr);}
+.grid-2{grid-template-columns:repeat(2,1fr);}
+.grid-single{grid-template-columns:1fr;max-width:420px;}
+@media (max-width:860px){
+  .grid-4{grid-template-columns:repeat(2,1fr);}
+}
+@media (max-width:600px){
+  .grid-4, .grid-2{grid-template-columns:1fr;}
+  main{padding:0 18px;}
+  .topbar{padding:14px 18px;}
+}
+
+.card{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:20px;
+  transition:border-color .15s, transform .15s, background .15s;
+}
+.card:hover{
+  border-color:var(--accent);
+  background:var(--panel-2);
+  transform:translateY(-2px);
+}
+.card-featured{
+  padding:28px;
+}
+.card-featured h3{
+  font-size:22px;
+}
+.card-featured p{
+  font-size:13.5px;
+}
+.card-tag{
+  align-self:flex-start;
+  font-family:var(--mono);
+  font-size:10px;
+  letter-spacing:.06em;
+  color:var(--accent-2);
+  background:rgba(41,224,196,.1);
+  border:1px solid rgba(41,224,196,.25);
+  padding:3px 7px;
+  border-radius:20px;
+}
+.card h3{
+  font-size:17px;
+  font-weight:700;
+  color:var(--paper);
+  margin:2px 0 0;
+}
+.card p{
+  font-size:12.5px;
+  line-height:1.6;
+  color:var(--muted);
+  margin:0;
+  flex:1;
+}
+
+/* ---------- 拡張機能・ソフトのリスト行 ---------- */
+.row{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:16px;
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:8px;
+  padding:13px 16px;
+  transition:border-color .15s, background .15s;
+}
+.row:hover{border-color:var(--accent);background:var(--panel-2);}
+.row-name{
+  font-size:13.5px;
+  font-weight:700;
+  color:var(--paper);
+  white-space:nowrap;
+}
+.row-desc{
+  font-size:12px;
+  color:var(--muted);
+  text-align:right;
+}
+@media (max-width:600px){
+  .row{flex-direction:column;align-items:flex-start;gap:4px;}
+  .row-desc{text-align:left;}
+}
+
+/* ---------- フッター ---------- */
+footer{
+  text-align:center;
+  padding:36px 20px;
+  border-top:1px solid var(--line-soft);
+  margin-top:20px;
+}
+.footer-links{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+  margin-bottom:10px;
+}
+.footer-links a{
+  font-family:var(--mono);
+  font-size:12px;
+  color:var(--muted);
+  transition:color .15s;
+}
+.footer-links a:hover{color:var(--accent);}
+.footer-copyright{
+  font-family:var(--mono);
+  font-size:10.5px;
+  color:var(--muted);
+  opacity:.6;
+}
