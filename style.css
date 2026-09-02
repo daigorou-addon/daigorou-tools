@@ -140,11 +140,12 @@ main{max-width:1080px;margin:0 auto;padding:0 32px;}
 .grid-4{grid-template-columns:repeat(4,1fr);}
 .grid-2{grid-template-columns:repeat(2,1fr);}
 .grid-single{grid-template-columns:1fr;max-width:420px;}
+.grid-3{grid-template-columns:repeat(3,1fr);}
 @media (max-width:860px){
-  .grid-4{grid-template-columns:repeat(2,1fr);}
+  .grid-4, .grid-3{grid-template-columns:repeat(2,1fr);}
 }
 @media (max-width:600px){
-  .grid-4, .grid-2{grid-template-columns:1fr;}
+  .grid-4, .grid-2, .grid-3{grid-template-columns:1fr;}
   main{padding:0 18px;}
   .topbar{padding:14px 18px;}
 }
