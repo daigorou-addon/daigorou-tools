@@ -8,7 +8,7 @@ const I18N = {
 ja: {
   page_title: "Daigorou-Tools — ツール置き場",
   hero_kicker: "ブラウザ完結 / 無料配布",
-  hero_lead: "配信・創作にまつわる小さなツールを作って公開しています。Web版はインストール不要、Chrome拡張とWindowsソフトはワンクリックで導入できます。",
+  hero_lead: "各種ツールを作って公開しています。Web版はインストール不要、Chrome拡張とWindowsソフトはワンクリックで導入できます。",
   sec1_title: "Webツール", sec1_desc: "ブラウザだけで完結。インストール・アップロード不要です。",
   card_safelight_desc: "画像の圧縮、変換、編集をブラウザ内だけで処理するツール集。",
   card_reckon_desc: "年齢計算・電卓・単位変換など、各種計算をブラウザ内で処理するツール集。",
@@ -27,6 +27,7 @@ ja: {
   app_relationgraph_desc: "相関図作成（デスクトップ版）",
   app_bracketmaker_desc: "トーナメント表作成（デスクトップ版）",
   footer_blog: "ブログ",
+  theme_toggle_title: "表示テーマを切り替え（ライト/ダーク）",
 },
 
 en: {
@@ -51,6 +52,7 @@ en: {
   app_relationgraph_desc: "Relationship diagram creation (desktop version)",
   app_bracketmaker_desc: "Tournament bracket creation (desktop version)",
   footer_blog: "Blog",
+  theme_toggle_title: "Switch theme (light/dark)",
 },
 
 ko: {
@@ -75,6 +77,7 @@ ko: {
   app_relationgraph_desc: "관계도 작성 (데스크톱 버전)",
   app_bracketmaker_desc: "토너먼트표 작성 (데스크톱 버전)",
   footer_blog: "블로그",
+  theme_toggle_title: "테마 전환(라이트/다크)",
 },
 
 "zh-CN": {
@@ -99,6 +102,7 @@ ko: {
   app_relationgraph_desc: "关系图制作（桌面版）",
   app_bracketmaker_desc: "锦标赛对阵表制作（桌面版）",
   footer_blog: "博客",
+  theme_toggle_title: "切换主题（浅色/深色）",
 },
 
 "zh-TW": {
@@ -123,6 +127,7 @@ ko: {
   app_relationgraph_desc: "關係圖製作（桌面版）",
   app_bracketmaker_desc: "錦標賽對戰表製作（桌面版）",
   footer_blog: "部落格",
+  theme_toggle_title: "切換主題（淺色/深色）",
 },
 
 es: {
@@ -147,6 +152,7 @@ es: {
   app_relationgraph_desc: "Creacion de diagramas de relaciones (version de escritorio)",
   app_bracketmaker_desc: "Creacion de cuadros de torneo (version de escritorio)",
   footer_blog: "Blog",
+  theme_toggle_title: "Cambiar tema (claro/oscuro)",
 },
 
 };
@@ -183,6 +189,10 @@ function applyI18n(lang){
     if(el.tagName === 'TITLE'){ document.title = val; }
     else { el.textContent = val; }
   });
+  document.querySelectorAll('[data-i18n-title]').forEach(el => {
+    const key = el.getAttribute('data-i18n-title');
+    el.title = t(key);
+  });
   const sel = document.getElementById('langSelect');
   if(sel) sel.value = currentLang;
 }
@@ -193,4 +203,26 @@ document.addEventListener('DOMContentLoaded', () => {
   if(sel){
     sel.addEventListener('change', () => applyI18n(sel.value));
   }
+});
+
+// ---- 表示テーマ(ライト/ダーク) ----
+function detectTheme(){
+  const saved = localStorage.getItem('daigorou-tools-theme');
+  if(saved === 'light' || saved === 'dark') return saved;
+  return 'dark'; // デフォルトはダーク
+}
+let currentTheme = detectTheme();
+function applyTheme(theme){
+  currentTheme = (theme === 'dark') ? 'dark' : 'light';
+  localStorage.setItem('daigorou-tools-theme', currentTheme);
+  document.documentElement.setAttribute('data-theme', currentTheme);
+  const btn = document.getElementById('themeToggleBtn');
+  if(btn){
+    btn.textContent = currentTheme === 'dark' ? '☾' : '☀';
+  }
+}
+applyTheme(currentTheme);
+document.addEventListener('DOMContentLoaded', () => {
+  const btn = document.getElementById('themeToggleBtn');
+  if(btn) btn.addEventListener('click', () => applyTheme(currentTheme === 'dark' ? 'light' : 'dark'));
 });
