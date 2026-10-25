@@ -7,7 +7,7 @@ const I18N = {
 
 ja: {
   page_title: "Daigorou-Tools — ツール置き場",
-  hero_kicker: "ブラウザ完結 / 無料配布",
+  hero_kicker: "ブラウザ完結 / 完全無料",
   hero_lead: "各種ツールを作って公開しています。Web版はインストール不要、Chrome拡張とWindowsソフトはワンクリックで導入できます。",
   sec1_title: "Webツール", sec1_desc: "インストール・アップロード不要です。すべてブラウザ内で処理され、サーバーには送信されません。",
   card_safelight_desc: "画像の圧縮、変換、編集をブラウザ内だけで処理するツール集。",
@@ -17,6 +17,7 @@ ja: {
   card_newsgen_desc: "ニュース番組・監視カメラ風の画像を自由に作成できるキャンバスエディタ。",
   card_graphmaker_desc: "数値を入力するだけで折れ線・棒グラフを作成できるツール。",
   card_businesscardmaker_desc: "テンプレートを選んで入力するだけで、表裏の名刺を作成・印刷できるツール。",
+  card_floorplanmaker_desc: "部屋を配置するだけで、ドア・窓・家具入りの間取り図を作成し、PNG保存・印刷できるツール。",
   sec2_title: "Chrome拡張機能", sec2_desc: "Chromeウェブストアからワンクリックで導入できます。",
   ext_tcc_desc: "ホワイトリスト方式でCookie/データを自動削除",
   ext_sbs_desc: "1つのタブで画面を左右に分割表示",
@@ -35,7 +36,7 @@ ja: {
 
 en: {
   page_title: "Daigorou-Tools — Tool Hub",
-  hero_kicker: "Runs in your browser / Free",
+  hero_kicker: "Runs in your browser / Completely free",
   hero_lead: "I build small tools for streaming and creative work. Web tools need no install, and the Chrome extensions and Windows apps are one click away.",
   sec1_title: "Web Tools", sec1_desc: "No install or upload needed. Everything is processed in your browser and nothing is sent to a server.",
   card_safelight_desc: "A set of tools for compressing, converting, and editing images, all processed in your browser.",
@@ -45,6 +46,7 @@ en: {
   card_newsgen_desc: "A canvas editor for freely creating news-broadcast and security-camera style images.",
   card_graphmaker_desc: "A tool that turns your numbers into line or bar charts in one click.",
   card_businesscardmaker_desc: "A tool for creating and printing front-and-back business cards by picking a template and filling in your details.",
+  card_floorplanmaker_desc: "A tool for creating floor plans with doors, windows and furniture by placing rooms, then saving as PNG or printing.",
   sec2_title: "Chrome Extensions", sec2_desc: "Install with one click from the Chrome Web Store.",
   ext_tcc_desc: "Automatically clears cookies/data, using a whitelist",
   ext_sbs_desc: "Split a single tab into a side-by-side view",
@@ -63,7 +65,7 @@ en: {
 
 ko: {
   page_title: "Daigorou-Tools — 툴 모음",
-  hero_kicker: "브라우저 완결 / 무료 배포",
+  hero_kicker: "브라우저 완결 / 완전 무료",
   hero_lead: "방송·창작에 관련된 작은 도구들을 만들어 공개하고 있습니다. 웹 버전은 설치가 필요 없고, Chrome 확장 프로그램과 Windows 소프트웨어는 클릭 한 번으로 설치할 수 있습니다.",
   sec1_title: "웹 도구", sec1_desc: "설치·업로드가 필요 없습니다. 모든 처리는 브라우저 안에서 이루어지며 서버로 전송되지 않습니다.",
   card_safelight_desc: "이미지의 압축, 변환, 편집을 브라우저 안에서 처리하는 도구 모음.",
@@ -73,6 +75,7 @@ ko: {
   card_newsgen_desc: "뉴스 방송·감시 카메라 스타일 이미지를 자유롭게 만들 수 있는 캔버스 에디터.",
   card_graphmaker_desc: "숫자만 입력하면 꺾은선·막대 그래프를 만들 수 있는 도구.",
   card_businesscardmaker_desc: "템플릿을 고르고 입력하기만 하면 앞뒤 명함을 만들고 인쇄할 수 있는 도구.",
+  card_floorplanmaker_desc: "방을 배치하기만 하면 문·창문·가구가 들어간 평면도를 만들고 PNG 저장과 인쇄를 할 수 있는 도구.",
   sec2_title: "Chrome 확장 프로그램", sec2_desc: "Chrome 웹 스토어에서 클릭 한 번으로 설치할 수 있습니다.",
   ext_tcc_desc: "화이트리스트 방식으로 쿠키/데이터를 자동 삭제",
   ext_sbs_desc: "하나의 탭 화면을 좌우로 분할 표시",
@@ -91,7 +94,7 @@ ko: {
 
 "zh-CN": {
   page_title: "Daigorou-Tools — 工具集",
-  hero_kicker: "浏览器内完成 / 免费提供",
+  hero_kicker: "浏览器内完成 / 完全免费",
   hero_lead: "我制作了一些与直播、创作相关的小工具并公开发布。网页版无需安装，Chrome扩展和Windows软件也可一键安装。",
   sec1_title: "网页工具", sec1_desc: "无需安装、无需上传。所有处理都在浏览器内完成，不会发送到服务器。",
   card_safelight_desc: "在浏览器内完成图片压缩、格式转换与编辑的工具集。",
@@ -101,6 +104,7 @@ ko: {
   card_newsgen_desc: "自由制作新闻广播、监控摄像头风格图片的画布编辑器。",
   card_graphmaker_desc: "只需输入数值即可生成折线图或柱状图的工具。",
   card_businesscardmaker_desc: "选择模板并填写信息，即可制作并打印正反面名片的工具。",
+  card_floorplanmaker_desc: "只需摆放房间，即可制作带门、窗和家具的户型图，并保存为PNG或打印的工具。",
   sec2_title: "Chrome 扩展", sec2_desc: "可从Chrome网上应用店一键安装。",
   ext_tcc_desc: "按白名单方式自动清除Cookie/数据",
   ext_sbs_desc: "将单个标签页画面左右分屏显示",
@@ -119,7 +123,7 @@ ko: {
 
 "zh-TW": {
   page_title: "Daigorou-Tools — 工具集",
-  hero_kicker: "瀏覽器內完成 / 免費提供",
+  hero_kicker: "瀏覽器內完成 / 完全免費",
   hero_lead: "我製作了一些與直播、創作相關的小工具並公開發布。網頁版無需安裝，Chrome擴充功能和Windows軟體也可一鍵安裝。",
   sec1_title: "網頁工具", sec1_desc: "無需安裝、無需上傳。所有處理都在瀏覽器內完成，不會傳送到伺服器。",
   card_safelight_desc: "在瀏覽器內完成圖片壓縮、格式轉換與編輯的工具集。",
@@ -129,6 +133,7 @@ ko: {
   card_newsgen_desc: "自由製作新聞廣播、監視攝影機風格圖片的畫布編輯器。",
   card_graphmaker_desc: "只需輸入數值即可生成折線圖或長條圖的工具。",
   card_businesscardmaker_desc: "選擇範本並填寫資料，即可製作並列印正反面名片的工具。",
+  card_floorplanmaker_desc: "只需擺放房間，即可製作含門、窗與家具的平面圖，並儲存為PNG或列印的工具。",
   sec2_title: "Chrome 擴充功能", sec2_desc: "可從Chrome線上應用程式商店一鍵安裝。",
   ext_tcc_desc: "以白名單方式自動清除Cookie/資料",
   ext_sbs_desc: "將單一分頁畫面左右分割顯示",
@@ -147,7 +152,7 @@ ko: {
 
 es: {
   page_title: "Daigorou-Tools — Colección de herramientas",
-  hero_kicker: "En tu navegador / Gratis",
+  hero_kicker: "En tu navegador / Totalmente gratis",
   hero_lead: "Creo pequenas herramientas relacionadas con streaming y creacion de contenido. Las versiones web no requieren instalacion, y las extensiones de Chrome y las apps de Windows se instalan con un clic.",
   sec1_title: "Herramientas web", sec1_desc: "Sin instalacion ni subida de archivos. Todo se procesa en el navegador y no se envia nada al servidor.",
   card_safelight_desc: "Un conjunto de herramientas para comprimir, convertir y editar imagenes, todo procesado en el navegador.",
@@ -157,6 +162,7 @@ es: {
   card_newsgen_desc: "Un editor de lienzo para crear libremente imágenes estilo noticiero y cámara de seguridad.",
   card_graphmaker_desc: "Una herramienta que convierte tus números en gráficos de líneas o barras con un clic.",
   card_businesscardmaker_desc: "Una herramienta para crear e imprimir tarjetas de presentación por ambas caras eligiendo una plantilla y rellenando tus datos.",
+  card_floorplanmaker_desc: "Una herramienta para crear planos de planta con puertas, ventanas y muebles colocando habitaciones, y guardarlos como PNG o imprimirlos.",
   sec2_title: "Extensiones de Chrome", sec2_desc: "Instalalas con un clic desde la Chrome Web Store.",
   ext_tcc_desc: "Borra automaticamente cookies/datos, usando una lista blanca",
   ext_sbs_desc: "Divide una sola pestana en vista dividida",
