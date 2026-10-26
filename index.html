@@ -28,10 +28,11 @@
     <span class="brand-name">Daigorou-Tools</span>
   </div>
   <nav class="toplinks">
-    <a href="https://daigorou-addon.github.io/safelight/">Safelight</a>
-    <a href="https://daigorou-addon.github.io/reckon/">Reckon</a>
-    <a href="https://daigorou-addon.github.io/relation-graph-web/">RelationGraph</a>
-    <a href="https://daigorou-addon.github.io/webcanvas/">WebCanvas</a>
+    <a data-i18n="name_safelight" href="https://daigorou-addon.github.io/safelight/">Safelight</a>
+    <a data-i18n="name_reckon" href="https://daigorou-addon.github.io/reckon/">Reckon</a>
+    <a data-i18n="name_luckydraw" href="https://daigorou-addon.github.io/lucky-draw/">LuckyDraw</a>
+    <a data-i18n="name_webcanvas" href="https://daigorou-addon.github.io/webcanvas/">WebCanvas</a>
+    <a class="support-link" href="https://buymeacoffee.com/daigorou" target="_blank" rel="noopener noreferrer">Support Me</a>
     <button id="themeToggleBtn" class="theme-toggle" data-i18n-title="theme_toggle_title" title="表示テーマを切り替え">☀</button>
     <select id="langSelect" class="lang-select">
       <option value="ja">日本語</option>
@@ -62,50 +63,56 @@
       <a class="card card-featured" href="https://daigorou-addon.github.io/webcanvas/">
         <img class="card-thumb" src="img/webcanvas.png" alt="WebCanvas" width="56" height="35" loading="lazy" onerror="this.remove()">
         <span class="card-tag">DESIGN</span>
-        <h3>WebCanvas</h3>
+        <h3 data-i18n="name_webcanvas">WebCanvas</h3>
         <p data-i18n="card_webcanvas_desc">画像・テキスト・図形・表を自由に配置して、サムネイルやバナーを作れるツール。</p>
       </a>
       <a class="card card-featured" href="https://daigorou-addon.github.io/safelight/">
         <img class="card-thumb" src="img/safelight.png" alt="Safelight" width="56" height="35" loading="lazy" onerror="this.remove()">
         <span class="card-tag">IMAGE</span>
-        <h3>Safelight</h3>
+        <h3 data-i18n="name_safelight">Safelight</h3>
         <p data-i18n="card_safelight_desc">画像の圧縮、変換、編集をブラウザ内だけで処理するツール集。</p>
       </a>
       <a class="card card-featured" href="https://daigorou-addon.github.io/reckon/">
         <img class="card-thumb" src="img/reckon.png" alt="Reckon" width="56" height="35" loading="lazy" onerror="this.remove()">
         <span class="card-tag">CALC</span>
-        <h3>Reckon</h3>
+        <h3 data-i18n="name_reckon">Reckon</h3>
         <p data-i18n="card_reckon_desc">年齢計算・電卓・単位変換など、各種計算をブラウザ内で処理するツール集。</p>
       </a>
       <a class="card card-featured" href="https://daigorou-addon.github.io/relation-graph-web/">
         <img class="card-thumb" src="img/relationgraph.png" alt="RelationGraph" width="56" height="35" loading="lazy" onerror="this.remove()">
         <span class="card-tag">DIAGRAM</span>
-        <h3>RelationGraph</h3>
+        <h3 data-i18n="name_relationgraph">RelationGraph</h3>
         <p data-i18n="card_relationgraph_desc">人物・組織の相関図を作成できるツール。</p>
       </a>
       <a class="card card-featured" href="https://daigorou-addon.github.io/newsgen/">
         <img class="card-thumb" src="img/newsgen.png" alt="NewsGen" width="56" height="35" loading="lazy" onerror="this.remove()">
         <span class="card-tag">NEWS</span>
-        <h3>NewsGen</h3>
+        <h3 data-i18n="name_newsgen">NewsGen</h3>
         <p data-i18n="card_newsgen_desc">ニュース番組・監視カメラ風の画像を自由に作成できるキャンバスエディタ。</p>
       </a>
       <a class="card card-featured" href="https://daigorou-addon.github.io/graphmaker/">
         <img class="card-thumb" src="img/graphmaker.png" alt="GraphMaker" width="56" height="35" loading="lazy" onerror="this.remove()">
         <span class="card-tag">CHART</span>
-        <h3>GraphMaker</h3>
+        <h3 data-i18n="name_graphmaker">GraphMaker</h3>
         <p data-i18n="card_graphmaker_desc">数値を入力するだけで折れ線・棒グラフを作成できるツール。</p>
       </a>
       <a class="card card-featured" href="https://daigorou-addon.github.io/businesscardmaker/">
         <img class="card-thumb" src="img/businesscardmaker.png" alt="BusinessCardMaker" width="56" height="35" loading="lazy" onerror="this.remove()">
         <span class="card-tag">CARD</span>
-        <h3>BusinessCardMaker</h3>
+        <h3 data-i18n="name_businesscardmaker">BusinessCardMaker</h3>
         <p data-i18n="card_businesscardmaker_desc">テンプレートを選んで入力するだけで、表裏の名刺を作成・印刷できるツール。</p>
       </a>
       <a class="card card-featured" href="https://daigorou-addon.github.io/floorplanmaker/">
         <img class="card-thumb" src="img/floorplanmaker.png" alt="FloorPlanMaker" width="56" height="35" loading="lazy" onerror="this.remove()">
         <span class="card-tag">PLAN</span>
-        <h3>FloorPlanMaker</h3>
+        <h3 data-i18n="name_floorplanmaker">FloorPlanMaker</h3>
         <p data-i18n="card_floorplanmaker_desc">部屋を配置するだけで、ドア・窓・家具入りの間取り図を作成し、PNG保存・印刷できるツール。</p>
+      </a>
+      <a class="card card-featured" href="https://daigorou-addon.github.io/lucky-draw/">
+        <img class="card-thumb" src="img/lucky-draw.png" alt="LuckyDraw" width="56" height="35" loading="lazy" onerror="this.remove()">
+        <span class="card-tag">DRAW</span>
+        <h3 data-i18n="name_luckydraw">LuckyDraw</h3>
+        <p data-i18n="card_luckydraw_desc">ルーレット・あみだくじ・レース・くじ引き・ダーツ・スロット・チーム分けができる抽選ツール集。</p>
       </a>
     </div>
   </section>
