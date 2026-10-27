@@ -179,6 +179,7 @@ main{max-width:1080px;margin:0 auto;padding:0 32px;}
   color:var(--ink);
   max-width:640px;
   margin:0;
+  white-space:pre-line;
 }
 
 /* ---------- セクション共通 ---------- */
@@ -214,7 +215,10 @@ main{max-width:1080px;margin:0 auto;padding:0 32px;}
 @media (max-width:600px){
   .grid-4, .grid-2, .grid-3{grid-template-columns:1fr;}
   main{padding:0 18px;}
-  .topbar{padding:14px 18px;}
+  .topbar{padding:14px 18px;justify-content:center;}
+  .brand{display:none;}
+  .toplinks{width:100%;justify-content:center;align-items:center;flex-wrap:nowrap;}
+  .toplinks a:not(.support-link){display:none;}
 }
 
 .card{

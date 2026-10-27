@@ -8,7 +8,7 @@ const I18N = {
 ja: {
   page_title: "Daigorou-Tools — ツール置き場",
   hero_kicker: "ブラウザ完結 / 完全無料",
-  hero_lead: "各種ツールを作って公開しています。Web版はインストール不要、Chrome拡張とWindowsソフトはワンクリックで導入できます。",
+  hero_lead: "各種ツールを作って公開しています。Web版はインストール不要\nChrome拡張とWindowsソフトはワンクリックで導入できます。",
   sec1_title: "Webツール", sec1_desc: "インストール・アップロード不要です。すべてブラウザ内で処理され、サーバーには送信されません。",
   card_safelight_desc: "画像の圧縮、変換、編集をブラウザ内だけで処理するツール集。",
   card_reckon_desc: "年齢計算・電卓・単位変換など、各種計算をブラウザ内で処理するツール集。",
