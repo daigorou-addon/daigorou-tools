@@ -202,6 +202,10 @@ main{max-width:1080px;margin:0 auto;padding:0 32px;}
   color:var(--muted);
   margin:0;
 }
+.section-head p.brave-note{
+  font-size:11px;
+  margin-top:6px;
+}
 
 /* ---------- Webツールのカード ---------- */
 .grid{display:grid;gap:14px;}

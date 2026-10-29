@@ -10,6 +10,7 @@ ja: {
   hero_kicker: "ブラウザ完結 / 完全無料",
   hero_lead: "各種ツールを作って公開しています。Web版はインストール不要\nChrome拡張とWindowsソフトはワンクリックで導入できます。",
   sec1_title: "Webツール", sec1_desc: "インストール・アップロード不要です。すべてブラウザ内で処理され、サーバーには送信されません。",
+  brave_note: "※スマホのBraveブラウザでは、シールド（ライオンマーク）をオフにしないと正常に動作しない場合があります。",
   card_safelight_desc: "画像の圧縮、変換、編集をブラウザ内だけで処理するツール集。",
   card_reckon_desc: "年齢計算・電卓・単位変換など、各種計算をブラウザ内で処理するツール集。",
   card_relationgraph_desc: "人物・組織の相関図を作成できるツール。",
@@ -41,6 +42,7 @@ en: {
   hero_kicker: "Runs in your browser / Completely free",
   hero_lead: "I build small tools for streaming and creative work. Web tools need no install, and the Chrome extensions and Windows apps are one click away.",
   sec1_title: "Web Tools", sec1_desc: "No install or upload needed. Everything is processed in your browser and nothing is sent to a server.",
+  brave_note: "Note: In Brave on mobile, the tools may not work properly unless Shields (the lion icon) are turned off.",
   card_safelight_desc: "A set of tools for compressing, converting, and editing images, all processed in your browser.",
   card_reckon_desc: "A set of calculators — age, arithmetic, unit conversion, and more — all processed in your browser.",
   card_relationgraph_desc: "A tool for creating relationship diagrams for people and organizations.",
@@ -72,6 +74,7 @@ ko: {
   hero_kicker: "브라우저 완결 / 완전 무료",
   hero_lead: "방송·창작에 관련된 작은 도구들을 만들어 공개하고 있습니다. 웹 버전은 설치가 필요 없고, Chrome 확장 프로그램과 Windows 소프트웨어는 클릭 한 번으로 설치할 수 있습니다.",
   sec1_title: "웹 도구", sec1_desc: "설치·업로드가 필요 없습니다. 모든 처리는 브라우저 안에서 이루어지며 서버로 전송되지 않습니다.",
+  brave_note: "※ 스마트폰의 Brave 브라우저에서는 Shields(사자 마크)를 끄지 않으면 정상적으로 작동하지 않을 수 있습니다.",
   card_safelight_desc: "이미지의 압축, 변환, 편집을 브라우저 안에서 처리하는 도구 모음.",
   card_reckon_desc: "나이 계산, 계산기, 단위 변환 등 각종 계산을 브라우저 안에서 처리하는 도구 모음.",
   card_relationgraph_desc: "인물·조직의 관계도를 작성할 수 있는 도구.",
@@ -103,6 +106,7 @@ ko: {
   hero_kicker: "浏览器内完成 / 完全免费",
   hero_lead: "我制作了一些与直播、创作相关的小工具并公开发布。网页版无需安装，Chrome扩展和Windows软件也可一键安装。",
   sec1_title: "网页工具", sec1_desc: "无需安装、无需上传。所有处理都在浏览器内完成，不会发送到服务器。",
+  brave_note: "※ 在手机版 Brave 浏览器中，若不关闭 Shields（狮子图标），可能无法正常使用。",
   card_safelight_desc: "在浏览器内完成图片压缩、格式转换与编辑的工具集。",
   card_reckon_desc: "年龄计算、计算器、单位换算等，在浏览器内完成各类计算的工具集。",
   card_relationgraph_desc: "创建人物、组织关系图的工具。",
@@ -134,6 +138,7 @@ ko: {
   hero_kicker: "瀏覽器內完成 / 完全免費",
   hero_lead: "我製作了一些與直播、創作相關的小工具並公開發布。網頁版無需安裝，Chrome擴充功能和Windows軟體也可一鍵安裝。",
   sec1_title: "網頁工具", sec1_desc: "無需安裝、無需上傳。所有處理都在瀏覽器內完成，不會傳送到伺服器。",
+  brave_note: "※ 在手機版 Brave 瀏覽器中，若不關閉 Shields（獅子圖示），可能無法正常使用。",
   card_safelight_desc: "在瀏覽器內完成圖片壓縮、格式轉換與編輯的工具集。",
   card_reckon_desc: "年齡計算、計算機、單位換算等，在瀏覽器內完成各類計算的工具集。",
   card_relationgraph_desc: "建立人物、組織關係圖的工具。",
@@ -165,6 +170,7 @@ es: {
   hero_kicker: "En tu navegador / Totalmente gratis",
   hero_lead: "Creo pequenas herramientas relacionadas con streaming y creacion de contenido. Las versiones web no requieren instalacion, y las extensiones de Chrome y las apps de Windows se instalan con un clic.",
   sec1_title: "Herramientas web", sec1_desc: "Sin instalacion ni subida de archivos. Todo se procesa en el navegador y no se envia nada al servidor.",
+  brave_note: "Nota: En Brave para movil, es posible que las herramientas no funcionen bien si no desactivas Shields (el icono del leon).",
   card_safelight_desc: "Un conjunto de herramientas para comprimir, convertir y editar imagenes, todo procesado en el navegador.",
   card_reckon_desc: "Un conjunto de calculadoras (edad, aritmetica, conversion de unidades y mas) procesadas en tu navegador.",
   card_relationgraph_desc: "Una herramienta para crear diagramas de relaciones entre personas y organizaciones.",
@@ -239,7 +245,18 @@ document.addEventListener('DOMContentLoaded', () => {
   if(sel){
     sel.addEventListener('change', () => applyI18n(sel.value));
   }
+  showBraveNote();
 });
+
+// ---- スマホのBraveブラウザ限定で、シールド設定の注意書きを表示 ----
+function showBraveNote(){
+  const note = document.getElementById('braveNote');
+  if(!note || !navigator.brave || typeof navigator.brave.isBrave !== 'function') return;
+  const isMobile = (window.matchMedia && window.matchMedia('(pointer: coarse)').matches)
+    || /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  if(!isMobile) return;
+  navigator.brave.isBrave().then(ok => { if(ok) note.hidden = false; }).catch(() => {});
+}
 
 // ---- 表示テーマ(ライト/ダーク) ----
 function detectTheme(){
