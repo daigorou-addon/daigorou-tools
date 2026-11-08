@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="page_title">Daigorou-Tools — ツール置き場</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<script>
+  // CSSが読み込まれる前にテーマ属性を確定させ、切り替え時のチラつきを防ぐ
+  (function(){
+    try{
+      var t = localStorage.getItem('daigorou-tools-theme');
+      document.documentElement.setAttribute('data-theme', (t === 'light') ? 'light' : 'dark');
+    }catch(e){}
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="i18n.js" defer></script>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <img class="brand-logo" src="favicon.png" alt="" width="28" height="28">
+    <span class="brand-name">Daigorou-Tools</span>
+  </div>
+  <nav class="toplinks">
+    <a data-i18n="name_safelight" href="https://daigorou-addon.github.io/safelight/">Safelight</a>
+    <a data-i18n="name_reckon" href="https://daigorou-addon.github.io/reckon/">Reckon</a>
+    <a data-i18n="name_luckydraw" href="https://daigorou-addon.github.io/lucky-draw/">LuckyDraw</a>
+    <a data-i18n="name_webcanvas" href="https://daigorou-addon.github.io/webcanvas/">WebCanvas</a>
+    <a class="support-link" href="https://buymeacoffee.com/daigorou" target="_blank" rel="noopener noreferrer">Support Me</a>
+    <button id="themeToggleBtn" class="theme-toggle" data-i18n-title="theme_toggle_title" title="表示テーマを切り替え">☀</button>
+    <select id="langSelect" class="lang-select">
+      <option value="ja">日本語</option>
+      <option value="en">English</option>
+      <option value="ko">한국어</option>
+      <option value="zh-CN">简体中文</option>
+      <option value="zh-TW">繁體中文</option>
+      <option value="es">Español</option>
+    </select>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero">
+    <p class="hero-kicker" data-i18n="hero_kicker">ブラウザ完結 / 完全無料</p>
+    <h1>Daigorou-Tools</h1>
+    <p class="hero-lead" data-i18n="hero_lead">各種ツールを作って公開しています。Web版はインストール不要
+Chrome拡張とWindowsソフトはワンクリックで導入できます。</p>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <span class="section-tag">01 — WEB</span>
+      <h2 data-i18n="sec1_title">Webツール</h2>
+      <p data-i18n="sec1_desc">インストール・アップロード不要です。すべてブラウザ内で処理され、サーバーには送信されません。</p>
+      <p id="braveNote" class="brave-note" data-i18n="brave_note" hidden>※スマホのBraveブラウザでは、シールド（ライオンマーク）をオフにしないと正常に動作しない場合があります。</p>
+    </div>
+    <div class="grid grid-4">
+      <a class="card card-featured" href="https://daigorou-addon.github.io/webcanvas/">
+        <img class="card-thumb" src="img/webcanvas.png" alt="WebCanvas" width="56" height="35" loading="lazy" onerror="this.remove()">
+        <span class="card-tag">DESIGN</span>
+        <h3 data-i18n="name_webcanvas">WebCanvas</h3>
+        <p data-i18n="card_webcanvas_desc">画像・テキスト・図形・表を自由に配置して、サムネイルやバナーを作れるツール。</p>
+      </a>
+      <a class="card card-featured" href="https://daigorou-addon.github.io/safelight/">
+        <img class="card-thumb" src="img/safelight.png" alt="Safelight" width="56" height="35" loading="lazy" onerror="this.remove()">
+        <span class="card-tag">IMAGE</span>
+        <h3 data-i18n="name_safelight">Safelight</h3>
+        <p data-i18n="card_safelight_desc">画像の圧縮、変換、編集をブラウザ内だけで処理するツール集。</p>
+      </a>
+      <a class="card card-featured" href="https://daigorou-addon.github.io/reckon/">
+        <img class="card-thumb" src="img/reckon.png" alt="Reckon" width="56" height="35" loading="lazy" onerror="this.remove()">
+        <span class="card-tag">CALC</span>
+        <h3 data-i18n="name_reckon">Reckon</h3>
+        <p data-i18n="card_reckon_desc">年齢計算・電卓・単位変換など、各種計算をブラウザ内で処理するツール集。</p>
+      </a>
+      <a class="card card-featured" href="https://daigorou-addon.github.io/relation-graph-web/">
+        <img class="card-thumb" src="img/relationgraph.png" alt="RelationGraph" width="56" height="35" loading="lazy" onerror="this.remove()">
+        <span class="card-tag">DIAGRAM</span>
+        <h3 data-i18n="name_relationgraph">RelationGraph</h3>
+        <p data-i18n="card_relationgraph_desc">人物・組織の相関図を作成できるツール。</p>
+      </a>
+      <a class="card card-featured" href="https://daigorou-addon.github.io/newsgen/">
+        <img class="card-thumb" src="img/newsgen.png" alt="NewsGen" width="56" height="35" loading="lazy" onerror="this.remove()">
+        <span class="card-tag">NEWS</span>
+        <h3 data-i18n="name_newsgen">NewsGen</h3>
+        <p data-i18n="card_newsgen_desc">ニュース番組・監視カメラ風の画像を自由に作成できるキャンバスエディタ。</p>
+      </a>
+      <a class="card card-featured" href="https://daigorou-addon.github.io/graphmaker/">
+        <img class="card-thumb" src="img/graphmaker.png" alt="GraphMaker" width="56" height="35" loading="lazy" onerror="this.remove()">
+        <span class="card-tag">CHART</span>
+        <h3 data-i18n="name_graphmaker">GraphMaker</h3>
+        <p data-i18n="card_graphmaker_desc">数値を入力するだけで折れ線・棒グラフを作成できるツール。</p>
+      </a>
+      <a class="card card-featured" href="https://daigorou-addon.github.io/businesscardmaker/">
+        <img class="card-thumb" src="img/businesscardmaker.png" alt="BusinessCardMaker" width="56" height="35" loading="lazy" onerror="this.remove()">
+        <span class="card-tag">CARD</span>
+        <h3 data-i18n="name_businesscardmaker">BusinessCardMaker</h3>
+        <p data-i18n="card_businesscardmaker_desc">テンプレートを選んで入力するだけで、表裏の名刺を作成・印刷できるツール。</p>
+      </a>
+      <a class="card card-featured" href="https://daigorou-addon.github.io/floorplanmaker/">
+        <img class="card-thumb" src="img/floorplanmaker.png" alt="FloorPlanMaker" width="56" height="35" loading="lazy" onerror="this.remove()">
+        <span class="card-tag">PLAN</span>
+        <h3 data-i18n="name_floorplanmaker">FloorPlanMaker</h3>
+        <p data-i18n="card_floorplanmaker_desc">部屋を配置するだけで、ドア・窓・家具入りの間取り図を作成し、PNG保存・印刷できるツール。</p>
+      </a>
+      <a class="card card-featured" href="https://daigorou-addon.github.io/lucky-draw/">
+        <img class="card-thumb" src="img/lucky-draw.png" alt="LuckyDraw" width="56" height="35" loading="lazy" onerror="this.remove()">
+        <span class="card-tag">DRAW</span>
+        <h3 data-i18n="name_luckydraw">LuckyDraw</h3>
+        <p data-i18n="card_luckydraw_desc">ルーレット・あみだくじ・レース・くじ引き・ダーツ・スロット・チーム分けができる抽選ツール集。</p>
+      </a>
+      <a class="card card-featured" href="https://daigorou-addon.github.io/worldclock/">
+        <img class="card-thumb" src="img/worldclock.png" alt="WorldClock" width="56" height="35" loading="lazy" onerror="this.remove()">
+        <span class="card-tag">CLOCK</span>
+        <h3 data-i18n="name_worldclock">WorldClock</h3>
+        <p data-i18n="card_worldclock_desc">世界の主要都市の現在時刻を一覧表示。自分の地域を先頭に表示し、カードの並べ替えもできるツール。</p>
+      </a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <span class="section-tag">02 — EXT</span>
+      <h2 data-i18n="sec2_title">Chrome拡張機能</h2>
+      <p data-i18n="sec2_desc">Chromeウェブストアからワンクリックで導入できます。</p>
+    </div>
+    <div class="grid grid-2">
+      <a class="row" href="https://chromewebstore.google.com/detail/fgbdpmmabohmpbkecbohmhadnnpcmadp?utm_source=item-share-cb" target="_blank" rel="noopener">
+        <span class="row-name"><img class="row-icon" src="img/icons/tabcookiecleaner.png" alt="" width="22" height="22" loading="lazy" onerror="this.remove()">TabCookieCleaner</span>
+        <span class="row-desc" data-i18n="ext_tcc_desc">ホワイトリスト方式でCookie/データを自動削除</span>
+      </a>
+      <a class="row" href="https://chromewebstore.google.com/detail/ldggejchfmefpfllgifcdkdidkndfijm?utm_source=item-share-cb" target="_blank" rel="noopener">
+        <span class="row-name"><img class="row-icon" src="img/icons/sidebyside.png" alt="" width="22" height="22" loading="lazy" onerror="this.remove()">Side by Side</span>
+        <span class="row-desc" data-i18n="ext_sbs_desc">1つのタブで画面を左右に分割表示</span>
+      </a>
+      <a class="row" href="https://chromewebstore.google.com/detail/amllefibcgamaindihhheocadjoeaiei?utm_source=item-share-cb" target="_blank" rel="noopener">
+        <span class="row-name"><img class="row-icon" src="img/icons/qrify.png" alt="" width="22" height="22" loading="lazy" onerror="this.remove()">QRify</span>
+        <span class="row-desc" data-i18n="ext_qr_desc">QRコードの作成・読み取り</span>
+      </a>
+      <a class="row" href="https://chromewebstore.google.com/detail/hnbjoaecldhkombolofpclgllfpgfhhi?utm_source=item-share-cb" target="_blank" rel="noopener">
+        <span class="row-name"><img class="row-icon" src="img/icons/xrepostcollapser.png" alt="" width="22" height="22" loading="lazy" onerror="this.remove()">X Repost Collapser</span>
+        <span class="row-desc" data-i18n="ext_xrc_desc">X(Twitter)のリポストをタイムラインで折りたたむ</span>
+      </a>
+      <a class="row" href="https://chromewebstore.google.com/detail/ghkobnmkiieaaolppjlgbmhbdlnjgfjc?utm_source=item-share-cb" target="_blank" rel="noopener">
+        <span class="row-name"><img class="row-icon" src="img/icons/ppplivealert.png" alt="" width="22" height="22" loading="lazy" onerror="this.remove()">PPP Live Alert</span>
+        <span class="row-desc" data-i18n="ext_ppp_desc">YouTube / Kick / Twitch / FC2の配信を通知</span>
+      </a>
+      <a class="row" href="https://chromewebstore.google.com/detail/ccbcmlofkmamdbfabkmjmnmbmikjnodb?utm_source=item-share-cb" target="_blank" rel="noopener">
+        <span class="row-name"><img class="row-icon" src="img/icons/livecommentsearch.png" alt="" width="22" height="22" loading="lazy" onerror="this.remove()">Live Comment Search</span>
+        <span class="row-desc" data-i18n="ext_lcs_desc">YouTube / Twitch / Kick / FC2のコメントを検索</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <span class="section-tag">03 — APP</span>
+      <h2 data-i18n="sec3_title">Windowsソフト</h2>
+      <p data-i18n="sec3_desc">GitHub Releasesから無料でダウンロードできます。</p>
+    </div>
+    <div class="grid grid-2">
+      <a class="row" href="https://github.com/daigorou-addon/LiveFlare/releases" target="_blank" rel="noopener">
+        <span class="row-name"><img class="row-icon" src="img/icons/liveflare.png" alt="" width="22" height="22" loading="lazy" onerror="this.remove()">LiveFlare</span>
+        <span class="row-desc" data-i18n="app_liveflare_desc">YouTube/Kick/Twitch/FC2/TwitCastingの配信開始を通知</span>
+      </a>
+      <a class="row" href="https://github.com/daigorou-addon/FamilyTree/releases" target="_blank" rel="noopener">
+        <span class="row-name"><img class="row-icon" src="img/icons/familytree.png" alt="" width="22" height="22" loading="lazy" onerror="this.remove()">FamilyTree</span>
+        <span class="row-desc" data-i18n="app_familytree_desc">家系図作成（デスクトップ版）</span>
+      </a>
+      <a class="row" href="https://github.com/daigorou-addon/RelationGraph/releases" target="_blank" rel="noopener">
+        <span class="row-name"><img class="row-icon" src="img/icons/relationgraph.png" alt="" width="22" height="22" loading="lazy" onerror="this.remove()">RelationGraph</span>
+        <span class="row-desc" data-i18n="app_relationgraph_desc">相関図作成（デスクトップ版）</span>
+      </a>
+      <a class="row" href="https://github.com/daigorou-addon/BracketMaker/releases" target="_blank" rel="noopener">
+        <span class="row-name"><img class="row-icon" src="img/icons/bracketmaker.png" alt="" width="22" height="22" loading="lazy" onerror="this.remove()">BracketMaker</span>
+        <span class="row-desc" data-i18n="app_bracketmaker_desc">トーナメント表作成（デスクトップ版）</span>
+      </a>
+      <a class="row" href="https://github.com/daigorou-addon/FloorPlanStudio/releases" target="_blank" rel="noopener">
+        <span class="row-name"><img class="row-icon" src="img/icons/floorplanstudio.png" alt="" width="22" height="22" loading="lazy" onerror="this.remove()">FloorPlanStudio</span>
+        <span class="row-desc" data-i18n="app_floorplanstudio_desc">間取り図作成（デスクトップ版）</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-links">
+    <a href="https://x.com/daigorouwork" target="_blank" rel="noopener">X (Twitter)</a>
+    <a href="https://daigorou-tools.blogspot.com/" target="_blank" rel="noopener" data-i18n="footer_blog">ブログ</a>
+  </div>
+  <div class="footer-copyright">Copyright (C) 2026 daigorou-tools. All rights reserved.</div>
+</footer>
+
+</body>
+</html>

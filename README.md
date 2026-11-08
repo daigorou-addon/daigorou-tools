@@ -27,6 +27,7 @@ Daigorou-Tools は、自作のWebツール・Chrome拡張機能・Windowsソフ�
 | [BusinessCardMaker（名刺メーカー）](https://daigorou-addon.github.io/businesscardmaker/) | テンプレートを選んで入力するだけで、表裏の名刺を作成・印刷できるツール |
 | [FloorPlanMaker（間取り図メーカー）](https://daigorou-addon.github.io/floorplanmaker/) | 部屋を配置するだけで、ドア・窓・家具入りの間取り図を作成し、PNG保存・印刷できるツール |
 | [LuckyDraw（各種抽選ツール）](https://daigorou-addon.github.io/lucky-draw/) | ルーレット・あみだくじ・レース・くじ引き・ダーツ・スロット・チーム分けができる抽選ツール集 |
+| [WorldClock（世界時計）](https://daigorou-addon.github.io/worldclock/) | 世界の主要都市の現在時刻を一覧表示。自分の地域を先頭に表示し、カードの並べ替えもできる時計ツール |
 
 ※スマホのBraveブラウザでは、シールド（ライオンマーク）をオフにしないと正常に動作しない場合があります。
 
@@ -93,6 +94,7 @@ No install or upload needed. Everything is processed in your browser and nothing
 | [BusinessCardMaker](https://daigorou-addon.github.io/businesscardmaker/) | Create and print front-and-back business cards by picking a template and filling in your details |
 | [FloorPlanMaker](https://daigorou-addon.github.io/floorplanmaker/) | Create floor plans with doors, windows and furniture by placing rooms, then save as PNG or print |
 | [LuckyDraw](https://daigorou-addon.github.io/lucky-draw/) | Draw tools: roulette, ladder lottery, race, lucky draw, darts, slots and team splitting |
+| [WorldClock](https://daigorou-addon.github.io/worldclock/) | Shows the current time in major cities around the world, with your own region first and rearrangeable cards |
 
 Note: In Brave on mobile, the tools may not work properly unless Shields (the lion icon) are turned off.
 
