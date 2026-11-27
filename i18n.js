@@ -36,7 +36,7 @@ ja: {
   ext_lcs_desc: "YouTube / Twitch / Kick / FC2のコメントを検索",
   ext_petbuddy_desc: "画面内でペットを飼って育てる",
   sec3_title: "Windowsソフト", sec3_desc: "GitHub Releasesから無料でダウンロードできます。",
-  sec4_title: "配信ランキング", sec4_desc: "配信情報をまとめて見られるポータルです。",
+  sec4_title: "配信ランキング（テスト中）", sec4_desc: "配信情報をまとめて見られるポータルです。",
   app_livescope_desc: "ライブ配信情報ポータル（Twitch/Kick/ツイキャス/FC2）",
   app_liveflare_desc: "YouTube/Kick/Twitch/FC2/TwitCastingの配信開始を通知",
   app_familytree_desc: "家系図作成（デスクトップ版）",
